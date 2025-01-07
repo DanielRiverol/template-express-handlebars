@@ -26,7 +26,7 @@ npm install -g degit
 #### Clonar el repositorio
 
 ```bash
-degit DanielRiverol/template-express-handlebars carpeta-destino
+degit DanielRiverol/template-server-handlebars carpeta-destino
 ```
 
 Reemplaza `usuario/repo-nombre` por el nombre del repositorio y `carpeta-destino` por el nombre de la carpeta donde deseas clonar el proyecto.
