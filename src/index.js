@@ -1,16 +1,20 @@
 import express from "express";
 import { engine } from "express-handlebars";
+import {join,__dirname} from "./utils/index.js"
 //settings
 const app = express();
 app.set("PORT", 3000);
 app.engine("handlebars", engine());
 app.set("view engine", "handlebars");
-app.set("views", "./src/views");
+app.set("views", join(__dirname,'views'));
+
+// console.log(join(__dirname, "views"));
+// console.log(join(__dirname, "../public"));
 
 // middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static("public"));
+app.use(express.static(join(__dirname, "../public")));
 
 //routes
 app.get("/", (req, res) => {
